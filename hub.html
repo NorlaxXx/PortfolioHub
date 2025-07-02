@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NorlaX | Portfólio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background: #0d0d0d;
+      color: #eaeaea;
+      padding: 0 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 30px 0 10px;
+      font-size: 28px;
+      color: #fff;
+      border-bottom: 1px solid #333;
+    }
+
+    .carrossel {
+      display: flex;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 20px 0;
+      margin: 0 auto;
+      max-width: 100%;
+      scrollbar-width: none;
+    }
+
+    .carrossel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .servico {
+      flex: 0 0 auto;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 20px;
+      min-width: 120px;
+      text-align: center;
+      color: #eaeaea;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .servico:hover {
+      background: #222;
+      transform: scale(1.05);
+      border-color: #555;
+    }
+
+    .servico i {
+      font-size: 24px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    section {
+      margin: 40px 0;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #222;
+    }
+
+    section h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .placeholder {
+      color: #777;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <header>NorlaX | Portfólio</header>
+
+  <div class="carrossel">
+    <a href="#sites" class="servico">
+      <i class="fas fa-globe"></i>
+      Sites
+    </a>
+    <a href="#bots" class="servico">
+      <i class="fas fa-robot"></i>
+      Bots
+    </a>
+    <a href="#cartoes" class="servico">
+      <i class="fas fa-id-card"></i>
+      Cartões
+    </a>
+    <a href="#outros" class="servico">
+      <i class="fas fa-puzzle-piece"></i>
+      Outros
+    </a>
+  </div>
+
+  <section id="sites">
+    <h2>🌐 Sites</h2>
+    <p class="placeholder">Seus projetos de sites vão aqui.</p>
+  </section>
+
+  <section id="bots">
+    <h2>🤖 Bots</h2>
+    <p class="placeholder">Bots criados com automações, Discord, Telegram, etc.</p>
+  </section>
+
+  <section id="cartoes">
+    <h2>💳 Cartões Digitais</h2>
+    <p class="placeholder">Exemplos de cartões digitais feitos para clientes ou portfólio pessoal.</p>
+  </section>
+
+  <section id="outros">
+    <h2>🧩 Outros</h2>
+    <p class="placeholder">Projetos diversos, scripts, Arduino, etc.</p>
+  </section>
+
+  <footer>Feito por NorlaX 🎩</footer>
+
+</body>
+</html>
