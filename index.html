@@ -8,7 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Share Tech Mono', monospace;
@@ -18,20 +23,30 @@
     }
 
     header {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo {
+      height: 50px;
+    }
+
+    .titulo {
+      font-size: 24px;
+      color: #eaeaea;
+    }
+
+    .carrossel-container {
       padding: 30px 0 10px;
-      font-size: 28px;
-      color: #fff;
-      border-bottom: 1px solid #333;
     }
 
     .carrossel {
       display: flex;
       overflow-x: auto;
       gap: 16px;
-      padding: 20px 0;
-      margin: 0 auto;
-      max-width: 100%;
       scrollbar-width: none;
     }
 
@@ -86,30 +101,47 @@
       padding: 20px;
       font-size: 12px;
       color: #666;
+      border-top: 1px solid #222;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .titulo {
+        font-size: 18px;
+      }
+
+      .logo {
+        height: 40px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>NorlaX | Portfólio</header>
+  <header>
+    <img src="Logo_Norlax.png" alt="Logo NorlaX" class="logo" />
+    <div class="titulo">NorlaX | Portfólio</div>
+  </header>
 
-  <div class="carrossel">
-    <a href="#sites" class="servico">
-      <i class="fas fa-globe"></i>
-      Sites
-    </a>
-    <a href="#bots" class="servico">
-      <i class="fas fa-robot"></i>
-      Bots
-    </a>
-    <a href="#cartoes" class="servico">
-      <i class="fas fa-id-card"></i>
-      Cartões
-    </a>
-    <a href="#outros" class="servico">
-      <i class="fas fa-puzzle-piece"></i>
-      Outros
-    </a>
+  <div class="carrossel-container">
+    <div class="carrossel">
+      <a href="#sites" class="servico">
+        <i class="fas fa-globe"></i>
+        Sites
+      </a>
+      <a href="#bots" class="servico">
+        <i class="fas fa-robot"></i>
+        Bots
+      </a>
+      <a href="#cartoes" class="servico">
+        <i class="fas fa-id-card"></i>
+        Cartões
+      </a>
+      <a href="#outros" class="servico">
+        <i class="fas fa-puzzle-piece"></i>
+        Outros
+      </a>
+    </div>
   </div>
 
   <section id="sites">
