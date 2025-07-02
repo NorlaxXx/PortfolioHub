@@ -6,7 +6,6 @@
   <title>NorlaX | Portfólio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
-
   <style>
     * {
       margin: 0;
@@ -17,133 +16,130 @@
 
     body {
       font-family: 'Share Tech Mono', monospace;
-      background: #0d0d0d;
+      background-color: #0d0d0d;
       color: #eaeaea;
-      padding: 0 20px;
     }
 
+    /* HEADER */
     header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 20px 0;
+      background-color: #111;
+      padding: 15px 20px;
       border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
-      height: 50px;
+      height: 40px;
     }
 
-    .titulo {
-      font-size: 24px;
+    .search-bar {
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .search-bar input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      background-color: #1a1a1a;
       color: #eaeaea;
     }
 
-    .carrossel-container {
-      padding: 30px 0 10px;
-    }
-
-    .carrossel {
-      display: flex;
+    /* CARROSSEL DE SERVIÇOS */
+    .carrossel-categorias {
       overflow-x: auto;
-      gap: 16px;
-      scrollbar-width: none;
+      white-space: nowrap;
+      padding: 10px 20px;
+      background-color: #141414;
+      border-bottom: 1px solid #222;
     }
 
-    .carrossel::-webkit-scrollbar {
-      display: none;
-    }
-
-    .servico {
-      flex: 0 0 auto;
+    .carrossel-categorias a {
+      display: inline-block;
       background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 20px;
-      min-width: 120px;
-      text-align: center;
       color: #eaeaea;
+      padding: 12px 20px;
+      margin-right: 10px;
+      border-radius: 8px;
       text-decoration: none;
-      transition: all 0.3s ease;
+      font-size: 14px;
+      border: 1px solid #2a2a2a;
+      transition: all 0.3s;
     }
 
-    .servico:hover {
-      background: #222;
-      transform: scale(1.05);
+    .carrossel-categorias a:hover {
+      background-color: #222;
       border-color: #555;
     }
 
-    .servico i {
-      font-size: 24px;
-      margin-bottom: 8px;
-      display: block;
-    }
-
+    /* SESSÕES */
     section {
-      margin: 40px 0;
-      padding-bottom: 20px;
+      padding: 40px 20px;
       border-bottom: 1px solid #222;
     }
 
     section h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #fff;
+      font-size: 22px;
+      margin-bottom: 12px;
     }
 
     .placeholder {
-      color: #777;
       font-size: 14px;
+      color: #888;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 20px;
       font-size: 12px;
       color: #666;
       border-top: 1px solid #222;
-      margin-top: 40px;
+      background: #111;
     }
 
-    @media (max-width: 600px) {
-      .titulo {
-        font-size: 18px;
+    @media (max-width: 768px) {
+      .search-bar {
+        display: none;
       }
 
-      .logo {
-        height: 40px;
+      .carrossel-categorias {
+        padding: 10px;
+      }
+
+      .carrossel-categorias a {
+        padding: 10px 14px;
+        font-size: 13px;
       }
     }
   </style>
 </head>
 <body>
 
+  <!-- Header com logo e "busca fake" -->
   <header>
     <img src="Logo_Norlax.png" alt="Logo NorlaX" class="logo" />
-    <div class="titulo">NorlaX | Portfólio</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar no portfólio..." />
+    </div>
+    <div style="width: 40px;"></div> <!-- Espaço reservado p/ botão futuro -->
   </header>
 
-  <div class="carrossel-container">
-    <div class="carrossel">
-      <a href="#sites" class="servico">
-        <i class="fas fa-globe"></i>
-        Sites
-      </a>
-      <a href="#bots" class="servico">
-        <i class="fas fa-robot"></i>
-        Bots
-      </a>
-      <a href="#cartoes" class="servico">
-        <i class="fas fa-id-card"></i>
-        Cartões
-      </a>
-      <a href="#outros" class="servico">
-        <i class="fas fa-puzzle-piece"></i>
-        Outros
-      </a>
-    </div>
-  </div>
+  <!-- Carrossel de serviços estilo categorias -->
+  <nav class="carrossel-categorias">
+    <a href="#sites"><i class="fas fa-globe"></i> Sites</a>
+    <a href="#bots"><i class="fas fa-robot"></i> Bots</a>
+    <a href="#cartoes"><i class="fas fa-id-card"></i> Cartões</a>
+    <a href="#outros"><i class="fas fa-puzzle-piece"></i> Outros</a>
+  </nav>
 
+  <!-- Sessões de conteúdo -->
   <section id="sites">
     <h2>🌐 Sites</h2>
     <p class="placeholder">Seus projetos de sites vão aqui.</p>
@@ -164,6 +160,7 @@
     <p class="placeholder">Projetos diversos, scripts, Arduino, etc.</p>
   </section>
 
+  <!-- Rodapé -->
   <footer>Feito por NorlaX 🎩</footer>
 
 </body>
